@@ -5,6 +5,7 @@
 * This code accompanies the paper titled "Reinforcement Learning for Control of Valves" https://arxiv.org/abs/2012.14668
 * The paper explores RL for optimum control of non-linear systems
 * Platform: MATLAB's Reinforcement Learning ToolBox (release R2019a) and Simulink
+* Run `main.m` to perform a test-run to ensure code is working. It runs 4 code files sequentially. It will train an agent with just 100 episodes, store it in `\results` folder, validate it against the PID, perform stability analysis (on an existing transfer-function data file, stored in `\data` folder) and produce plots and store them in `\results` folder.
 
 #### Training the RL controller:
 * `code_DDPG_Training.m`: Training code that uses DDPG to train an agent in a staged manner. Uses sm_DDPG_Training_Circuit.slx. This file is run iteratively, using Graded Learning to run on the previously stored model and enhancing it's "learning".    
